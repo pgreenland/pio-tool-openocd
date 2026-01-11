@@ -13,11 +13,13 @@ systype = get_systype().replace("_", "-")
 # OpenOCD version
 open_ocd_version = "0.12.0-7"
 
-url = (
-  "https://github.com/xpack-dev-tools/openocd-xpack/releases/download/"
-  f"v{open_ocd_version}/xpack-openocd-{open_ocd_version}-{systype}.tar.gz"
-)
+# Download and unpack OpenOCD archive
+url = f"https://github.com/xpack-dev-tools/openocd-xpack/releases/download/v{open_ocd_version}/xpack-openocd-{open_ocd_version}-{systype}.tar.gz"
 filename = f"xpack-openocd-{open_ocd_version}.tar.gz"
+
+# Print info
+print(f"Downloading and unpacking OpenOCD {open_ocd_version} for {systype} from {url} ...")
+
 path, headers = urlretrieve(url, filename)
 unpack_archive(path, getcwd())
 for file in listdir(f"xpack-openocd-{open_ocd_version}"):
