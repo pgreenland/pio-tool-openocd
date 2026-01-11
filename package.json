@@ -15,7 +15,8 @@
     "url": "https://sourceforge.net/p/openocd/code/ci/master/tree/"
   },
   "system": [
-    "linux_aarch64"
+    "linux_aarch64",
+    "darwin_arm64"
   ],
   "scripts": {
     "postinstall": "./download_archive.py"
