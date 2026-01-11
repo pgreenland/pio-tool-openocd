@@ -1,0 +1,2 @@
+pio pkg install -t https://github.com/pgreenland/pio-tool-openocd.git#updates -f --no-save
+
